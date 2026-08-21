@@ -1,0 +1,29 @@
+{
+  "completed_at": "2026-08-19T20:54:44",
+  "frozen_config_signature": "87adbd42d3ee25d98f327f73515c181a6be6402aa9be5ee565b7325f541ae18f",
+  "frozen_configs": {
+    "Binary": {
+      "patch_size": 64,
+      "feature_method": "Mutclass",
+      "k": 3600,
+      "seed": 42
+    },
+    "Three_Class": {
+      "patch_size": 256,
+      "feature_method": "Variance",
+      "k": 225,
+      "seed": 42
+    },
+    "Five_Class": {
+      "patch_size": 256,
+      "feature_method": "Logistic",
+      "k": 200,
+      "seed": 42
+    }
+  },
+  "final_seed": 42,
+  "source_variant": "StandardScaled",
+  "results_file": "G:\\My Research About Lung Canser\\INASS\\7-DNNFinalLockedTest\\Final_DNN_Locked_Test_Results.xlsx",
+  "checkpoint_file": "G:\\My Research About Lung Canser\\INASS\\7-DNNFinalLockedTest\\Final_DNN_Locked_Test_Checkpoint.csv",
+  "scientific_statement": "All final DNN configuration decisions were frozen before Test. The Test partition was used only for final evaluation and did not influence preprocessing fitting, feature ranking, K selection, patch-size selection, DNN architecture, hyperparameters, or random-seed selection."
+}
