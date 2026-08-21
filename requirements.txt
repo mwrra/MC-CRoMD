@@ -1,1 +1,10 @@
-
+numpy
+pandas
+scipy
+scikit-learn
+tensorflow
+opencv-python
+openpyxl
+matplotlib
+pyarrow
+joblib
