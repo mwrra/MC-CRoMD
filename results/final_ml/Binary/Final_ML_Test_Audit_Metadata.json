@@ -1,0 +1,42 @@
+{
+  "generated_at": "2026-08-19T21:13:47",
+  "frozen_config_signature": "6fdea8539fd410af16b75b1c201a3ce97bd33499602c680f6033a4d1036e0a0c",
+  "scenario": "Binary",
+  "frozen_config": {
+    "patch_size": 128,
+    "feature_method": "Logistic",
+    "k": 125,
+    "model": "Voting",
+    "source_variant": "StandardScaled",
+    "parameters": {
+      "voting": "hard"
+    },
+    "validation_accuracy": 0.9849624060150376,
+    "validation_f1_macro": 0.9849615558570782
+  },
+  "paths": {
+    "preprocessing_dir": "G:\\My Research About Lung Canser\\INASS\\3-DataPreprocessing\\128",
+    "feature_selection_dir": "G:\\My Research About Lung Canser\\INASS\\4-FeatureSelection\\128",
+    "selected_feature_path": "G:\\My Research About Lung Canser\\INASS\\4-FeatureSelection\\128\\Binary\\Logistic\\Selected_Features_K125.xlsx",
+    "train_path": "G:\\My Research About Lung Canser\\INASS\\3-DataPreprocessing\\128\\Binary\\StandardScaled\\Train.csv.gz",
+    "test_path": "G:\\My Research About Lung Canser\\INASS\\3-DataPreprocessing\\128\\Binary\\StandardScaled\\Test.csv.gz"
+  },
+  "selected_feature_count": 125,
+  "sample_id_column": "ImageSHA256",
+  "group_id_column": "SourceGroupID",
+  "checksums": {
+    "selected_features_sha256": "9c03d596ba03d18b8aa1a8e8c3f4c2c88a6b7e39697d30f82401624eb976c8e3",
+    "train_input_sha256": "65ae9342374746930306698eec746e697352ecce6fbaadd760ae48c1cc783c17",
+    "test_input_sha256": "98ecc2ec1510e451a327503436d78bc1e1e574c1f41057a45a430497eb1ea1d3",
+    "fitted_model_sha256": "3a810522ad308e5998766b496c295acca5ee565026b0962481e4262e0c579b5a",
+    "final_predictions_sha256": "17f82291a7b7f0183bdbf40deeddc2d6affe027b280d1c10ea6085d437d5df9c"
+  },
+  "software": {
+    "python": "3.12.4",
+    "numpy": "1.26.4",
+    "pandas": "2.2.2",
+    "scikit_learn": "1.4.2",
+    "joblib": "1.4.2"
+  },
+  "scientific_policy": "Configuration frozen from Validation/Tuning only; model fitted once on frozen preprocessed Train; Test opened only for final evaluation; no preprocessing fitting, feature selection, hyperparameter tuning, model selection, or threshold tuning on Test."
+}

@@ -1,0 +1,41 @@
+{
+  "scenario": "Binary",
+  "frozen_config": {
+    "patch_size": 128,
+    "feature_method": "Logistic",
+    "k": 125,
+    "model": "Voting",
+    "source_variant": "StandardScaled",
+    "parameters": {
+      "voting": "hard"
+    },
+    "validation_accuracy": 0.9849624060150376,
+    "validation_f1_macro": 0.9849615558570782
+  },
+  "random_state": 42,
+  "train_rows": 7148,
+  "test_rows": 2054,
+  "class_names": [
+    "colon_aca",
+    "colon_n"
+  ],
+  "fit_seconds": 15.133016899926588,
+  "predict_seconds": 0.14142360002733767,
+  "metrics": {
+    "Accuracy": 0.9410905550146057,
+    "Precision_Macro": 0.9447068710140367,
+    "Recall_Macro": 0.9398873061948381,
+    "F1_Macro": 0.9408116388646439,
+    "Precision_Weighted": 0.9437294883114877,
+    "Recall_Weighted": 0.9410905550146057,
+    "F1_Weighted": 0.9409303265880319,
+    "ROC_AUC_OVR_Macro": NaN
+  },
+  "auc_note": "ROC-AUC is unavailable (NaN) when the frozen estimator does not expose predict_proba or decision_function, e.g. hard Voting.",
+  "bootstrap": {
+    "repeats": 2000,
+    "seed": 20260819,
+    "unit": "SourceGroupID",
+    "group_column": "SourceGroupID"
+  }
+}
