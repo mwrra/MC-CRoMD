@@ -1,0 +1,49 @@
+{
+  "generated_at": "2026-08-19T20:53:07",
+  "frozen_config_signature": "87adbd42d3ee25d98f327f73515c181a6be6402aa9be5ee565b7325f541ae18f",
+  "scenario": "Three_Class",
+  "frozen_config": {
+    "patch_size": 256,
+    "feature_method": "Variance",
+    "k": 225,
+    "seed": 42
+  },
+  "paths": {
+    "preprocessing_dir": "G:\\My Research About Lung Canser\\INASS\\3-DataPreprocessing\\256",
+    "feature_selection_dir": "G:\\My Research About Lung Canser\\INASS\\4-FeatureSelection\\256",
+    "dnn_validation_dir": "G:\\My Research About Lung Canser\\INASS\\6-DNNValidation\\256",
+    "selected_feature_path": "G:\\My Research About Lung Canser\\INASS\\4-FeatureSelection\\256\\Three_Class\\Variance\\Selected_Features_K225.xlsx",
+    "run_dir": "G:\\My Research About Lung Canser\\INASS\\6-DNNValidation\\256\\Runs\\Three_Class\\Variance\\K00225\\Seed_42",
+    "model_path": "G:\\My Research About Lung Canser\\INASS\\6-DNNValidation\\256\\Runs\\Three_Class\\Variance\\K00225\\Seed_42\\Best_Model.keras",
+    "run_metadata_path": "G:\\My Research About Lung Canser\\INASS\\6-DNNValidation\\256\\Runs\\Three_Class\\Variance\\K00225\\Seed_42\\Run_Metadata.json",
+    "validation_selected_features_path": "G:\\My Research About Lung Canser\\INASS\\6-DNNValidation\\256\\Runs\\Three_Class\\Variance\\K00225\\Seed_42\\Selected_Features.xlsx",
+    "test_path": "G:\\My Research About Lung Canser\\INASS\\3-DataPreprocessing\\256\\Three_Class\\StandardScaled\\Test.csv.gz"
+  },
+  "validation_artifact_checks": {
+    "scenario_match": true,
+    "feature_method_match": true,
+    "k_match": true,
+    "seed_match": true,
+    "source_variant_match": true
+  },
+  "selected_feature_count": 225,
+  "test_rows": 2990,
+  "sample_id_column": "ImageSHA256",
+  "group_id_column": "SourceGroupID",
+  "checksums": {
+    "model_sha256": "b759c82c383b3de5eb3d764004443012c75d088fc6cb580b0c9c29e5545bcfa0",
+    "selected_features_sha256": "13ba66e01bdd59faefc8e382a58b6950c6cc7a468ed30929ab406b0e197d096b",
+    "validation_run_metadata_sha256": "1b6b19e561ad1ad3dfd34d7120939630ea20da32155e81fc7bf8d820da966c7b",
+    "test_input_sha256": "9f7c3a2c2a4da20a13b7c8ca96346904655480193b04cd6b14958000327ec23c",
+    "final_predictions_sha256": "798e03a356da1b7e1a87cfd560da1b38cad38e97416317717877348f2643bfba"
+  },
+  "software": {
+    "python": "3.12.4",
+    "tensorflow": "2.17.0",
+    "keras": "3.5.0",
+    "numpy": "1.26.4",
+    "pandas": "2.2.2",
+    "scikit_learn": "1.4.2"
+  },
+  "scientific_policy": "Frozen validation-selected configuration; fixed seed 42; no fitting, tuning, ranking, or configuration selection on Test."
+}
