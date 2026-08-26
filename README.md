@@ -2,7 +2,7 @@
 
 **MC-CRoMD: A Multi-Channel Statistical Feature Extraction and Selection Framework for Lung and Colon Histopathological Image Classification Using Machine and Deep Learning**
 
-This repository provides the implementation code, selected validation results, final locked-test outputs, source-group split manifests, selected feature sets, bootstrap distributions for the final reported configurations, and publication figures for the revised MC-CRoMD study.
+This repository provides the implementation code, selected validation results, final locked-test outputs, source-group split manifests, selected feature sets, bootstrap distributions for the final reported configurations, supplementary analysis and verification scripts, and publication figures for the revised MC-CRoMD study.
 
 ## Overview
 
@@ -251,6 +251,8 @@ These resources cover:
 * Machine-learning hyperparameter tuning
 * DNN validation
 * Final locked-test evaluation
+* Validation-only component and Pearson-correlation ablation
+* Verification of the descriptive statistics reported in Tables 8–10
 * Publication figure generation
 
 Software dependencies are listed in:
@@ -275,6 +277,20 @@ where:
 * `Pre7` performs final locked-test evaluation.
 * `Pre8_Generate_Final_Publication_Figures.py` generates the final publication figures from saved outputs.
 
+### Supplementary Analysis and Verification
+
+The scripts in:
+
+`code/supplementary_analysis/`
+
+are supplementary analyses and verification utilities and are **not part of the mandatory Pre1–Pre8 execution pipeline**.
+
+They include:
+
+* `MC_CRoMD_Ablation_Pearson_ThreeClass_256.py` — performs the validation-only Three-Class 256×256 ablation using the fixed group-aware Train/Validation partitions. It evaluates Alpha-only, dispersion-only, combined MC-CRoMD, Pearson-only, and dispersion-plus-Pearson variants using the prespecified seeds 42, 43, and 44. The locked Test partition is never loaded or used by this analysis.
+* `Recalculate_Table8_Cronbach_Statistics.py` — recalculates the Cronbach's Alpha descriptive statistics reported in Table 8 directly from the stored MC-CRoMD feature files.
+* `Recalculate_Table9_10_Dispersion_Statistics_Fast.py` — recalculates the dispersion statistics reported in Tables 9 and 10 and performs internal consistency checks on the stored feature values.
+
 The test partition is not required for model-development stages and remains locked until final evaluation.
 
 For reproducibility and auditability, the repository now provides:
@@ -288,6 +304,7 @@ For reproducibility and auditability, the repository now provides:
 * Confusion-matrix counts
 * Final-test audit metadata
 * Selected feature sets for the final reported configurations
+* Supplementary ablation and statistical-verification scripts in `code/supplementary_analysis/`
 
 Because the original LC25000 dataset and large intermediate feature matrices are not redistributed, users must first obtain and prepare the dataset before executing the complete workflow.
 
@@ -351,7 +368,11 @@ MC-CRoMD/
 │   ├── Pre6_Model_Validation/
 │   ├── Pre6_DNN_Validation/
 │   ├── Pre7_Final_Locked_Test/
-│   └── Pre8_Generate_Final_Publication_Figures.py
+│   ├── Pre8_Generate_Final_Publication_Figures.py
+│   └── supplementary_analysis/
+│       ├── MC_CRoMD_Ablation_Pearson_ThreeClass_256.py
+│       ├── Recalculate_Table8_Cronbach_Statistics.py
+│       └── Recalculate_Table9_10_Dispersion_Statistics_Fast.py
 │
 ├── figures/
 │   ├── Figure_7_DNN_Validation_Loss.png
@@ -371,6 +392,8 @@ MC-CRoMD/
 ├── README.md
 └── requirements.txt
 ```
+
+The `supplementary_analysis/` directory contains reviewer-oriented validation and verification scripts. These scripts document the reported ablation study and the recalculation of Tables 8–10, but they are not required for the main Pre1–Pre8 model-development and final-evaluation workflow.
 
 ---
 
