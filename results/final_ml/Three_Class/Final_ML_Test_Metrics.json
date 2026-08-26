@@ -1,0 +1,43 @@
+{
+  "scenario": "Three_Class",
+  "frozen_config": {
+    "patch_size": 256,
+    "feature_method": "Variance",
+    "k": 200,
+    "model": "SVM_RBF",
+    "source_variant": "StandardScaled",
+    "parameters": {
+      "C": 10.0,
+      "gamma": "scale"
+    },
+    "validation_accuracy": 0.9297153024911032,
+    "validation_f1_macro": 0.9311504488293526
+  },
+  "random_state": 42,
+  "train_rows": 10886,
+  "test_rows": 2990,
+  "class_names": [
+    "lung_aca",
+    "lung_scc",
+    "lung_n"
+  ],
+  "fit_seconds": 23.149602700024843,
+  "predict_seconds": 2.988991799997166,
+  "metrics": {
+    "Accuracy": 0.9351170568561873,
+    "Precision_Macro": 0.9384632066718276,
+    "Recall_Macro": 0.9344603933214867,
+    "F1_Macro": 0.9345885118871174,
+    "Precision_Weighted": 0.9383648199073805,
+    "Recall_Weighted": 0.9351170568561873,
+    "F1_Weighted": 0.9348771396075036,
+    "ROC_AUC_OVR_Macro": 0.9856792242674567
+  },
+  "auc_note": "ROC-AUC is unavailable (NaN) when the frozen estimator does not expose predict_proba or decision_function, e.g. hard Voting.",
+  "bootstrap": {
+    "repeats": 2000,
+    "seed": 20260819,
+    "unit": "SourceGroupID",
+    "group_column": "SourceGroupID"
+  }
+}
