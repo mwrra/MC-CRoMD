@@ -1,0 +1,30 @@
+{
+  "scenario": "Binary",
+  "patch_size": 64,
+  "feature_method": "Mutclass",
+  "k": 3600,
+  "final_seed": 42,
+  "source_variant": "StandardScaled",
+  "test_rows": 2054,
+  "class_names": [
+    "0",
+    "1"
+  ],
+  "metrics": {
+    "Accuracy": 0.9406037000973709,
+    "Precision_Macro": 0.9406665812197079,
+    "Recall_Macro": 0.9404391034978161,
+    "F1_Macro": 0.9405385293662614,
+    "Precision_Weighted": 0.9406169382283893,
+    "Recall_Weighted": 0.9406037000973709,
+    "F1_Weighted": 0.9405960329525346,
+    "ROC_AUC_OVR_Macro": 0.9824767585632964
+  },
+  "bootstrap": {
+    "repeats": 2000,
+    "seed": 20260819,
+    "unit": "SourceGroupID",
+    "group_column": "SourceGroupID"
+  },
+  "predict_seconds": 0.7682970000896603
+}
