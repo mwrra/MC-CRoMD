@@ -1,0 +1,43 @@
+{
+  "generated_at": "2026-08-19T21:16:42",
+  "frozen_config_signature": "6fdea8539fd410af16b75b1c201a3ce97bd33499602c680f6033a4d1036e0a0c",
+  "scenario": "Five_Class",
+  "frozen_config": {
+    "patch_size": 256,
+    "feature_method": "Logistic",
+    "k": 200,
+    "model": "LogisticRegression",
+    "source_variant": "StandardScaled",
+    "parameters": {
+      "C": 10.0,
+      "penalty": "l2"
+    },
+    "validation_accuracy": 0.9396462018730489,
+    "validation_f1_macro": 0.93978824070617
+  },
+  "paths": {
+    "preprocessing_dir": "G:\\My Research About Lung Canser\\INASS\\3-DataPreprocessing\\256",
+    "feature_selection_dir": "G:\\My Research About Lung Canser\\INASS\\4-FeatureSelection\\256",
+    "selected_feature_path": "G:\\My Research About Lung Canser\\INASS\\4-FeatureSelection\\256\\Five_Class\\Logistic\\Selected_Features_K200.xlsx",
+    "train_path": "G:\\My Research About Lung Canser\\INASS\\3-DataPreprocessing\\256\\Five_Class\\StandardScaled\\Train.csv.gz",
+    "test_path": "G:\\My Research About Lung Canser\\INASS\\3-DataPreprocessing\\256\\Five_Class\\StandardScaled\\Test.csv.gz"
+  },
+  "selected_feature_count": 200,
+  "sample_id_column": "ImageSHA256",
+  "group_id_column": "SourceGroupID",
+  "checksums": {
+    "selected_features_sha256": "4a03736a58d22bf0dfdf1ac52a4e7842400a739eeb5e37d4516badf255f369ec",
+    "train_input_sha256": "4f7cb6a220e19fa5a6b8a489e1c2bb623aba1bd82e8db084dadf8793ba6ed58f",
+    "test_input_sha256": "ee422d762b0ce511666d2dcc573d1eab7c44914719ca09f3d4bca4cec5adda3c",
+    "fitted_model_sha256": "206a20b0d27fe4f50e31a454e8789c61038e3b5b9fa277a1b9bf8348c9264d7d",
+    "final_predictions_sha256": "44fe5c8174b1c5e5e5603f61161657a9c8ec5b8f606b31195d5bd778fa152a11"
+  },
+  "software": {
+    "python": "3.12.4",
+    "numpy": "1.26.4",
+    "pandas": "2.2.2",
+    "scikit_learn": "1.4.2",
+    "joblib": "1.4.2"
+  },
+  "scientific_policy": "Configuration frozen from Validation/Tuning only; model fitted once on frozen preprocessed Train; Test opened only for final evaluation; no preprocessing fitting, feature selection, hyperparameter tuning, model selection, or threshold tuning on Test."
+}
