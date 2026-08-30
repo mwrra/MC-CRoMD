@@ -243,6 +243,8 @@ These resources cover:
 - DNN validation
 - Final locked-test evaluation
 - Validation-only component and Pearson-correlation ablation
+- Controlled locked-test comparison of MC-CRoMD with RGB Histogram and GLCM handcrafted baselines
+- SourceGroupID-aware paired bootstrap analysis of the controlled baseline comparisons
 - Verification of the descriptive statistics currently reported in Tables 5–7 of the revised manuscript
 - Publication and supplementary figure generation
 
@@ -279,6 +281,8 @@ are supplementary analyses and verification utilities and are not part of the ma
 They include:
 
 - `MC_CRoMD_Ablation_Pearson_ThreeClass_256.py` — performs the validation-only Three-Class 256×256 ablation using the fixed group-aware Train/Validation partitions. It evaluates Alpha-only, dispersion-only, combined MC-CRoMD, Pearson-only, and dispersion-plus-Pearson variants using the prespecified seeds 42, 43, and 44. The locked Test partition is never loaded or used by this analysis.
+- `MC_CRoMD_Controlled_Baselines_ThreeClass_256.py` — performs the controlled locked-test comparison of the full 225-feature MC-CRoMD representation against 216-feature RGB Histogram and 216-feature GLCM handcrafted representations for the Three-Class 256×256 setting. All representations use the same source-group-aware Train/Validation/Test partitions, training-derived preprocessing strategy, and fixed SVM-RBF configuration (`C = 10`, `gamma = scale`, `class_weight = balanced`). No baseline-specific hyperparameter tuning is performed.
+- `MC_CRoMD_Controlled_Baselines_ThreeClass_256_PAIRED_BOOTSTRAP.py` — performs the SourceGroupID-aware paired bootstrap analysis for the controlled Three-Class 256×256 baseline comparison, using the saved locked-test prediction outputs to estimate paired performance differences and their 95% confidence intervals.
 - `Recalculate_Table8_Cronbach_Statistics.py` — recalculates the Cronbach's Alpha descriptive statistics currently reported in Table 5 of the revised manuscript directly from the stored MC-CRoMD feature files.
 - `Recalculate_Table9_10_Dispersion_Statistics_Fast.py` — recalculates the dispersion statistics currently reported in Tables 6 and 7 of the revised manuscript and performs internal consistency checks on the stored feature values.
 
@@ -364,6 +368,8 @@ MC-CRoMD/
 │   ├── Pre8_Generate_Final_Publication_Figures.py
 │   └── supplementary_analysis/
 │       ├── MC_CRoMD_Ablation_Pearson_ThreeClass_256.py
+│       ├── MC_CRoMD_Controlled_Baselines_ThreeClass_256.py
+│       ├── MC_CRoMD_Controlled_Baselines_ThreeClass_256_PAIRED_BOOTSTRAP.py
 │       ├── Recalculate_Table8_Cronbach_Statistics.py
 │       └── Recalculate_Table9_10_Dispersion_Statistics_Fast.py
 │
@@ -386,7 +392,7 @@ MC-CRoMD/
 └── requirements.txt
 ```
 
-The `supplementary_analysis/` directory contains reviewer-oriented validation and verification scripts. These scripts document the reported ablation study and the recalculation of the descriptive statistics currently reported in Tables 5–7 of the revised manuscript, but they are not required for the main Pre1–Pre8 model-development and final-evaluation workflow.
+The `supplementary_analysis/` directory contains reviewer-oriented analysis and verification scripts. These scripts document the reported validation-only ablation study, the controlled handcrafted-baseline comparison and its SourceGroupID-aware paired bootstrap analysis, and the recalculation of the descriptive statistics currently reported in Tables 5–7 of the revised manuscript. They are not required for the main Pre1–Pre8 model-development and final-evaluation workflow.
 
 ---
 
